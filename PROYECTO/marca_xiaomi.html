@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compra Online</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="KIVC">
+	<!---css-->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/miEstilo.css" rel="stylesheet">
+	<link rel="icon" href="img/etiqueta.png">
+	<!--javascrip-->
+	<script src="js/jquery-slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="js/eventos.js"></script>
+	<style type="text/css">
+
+		body{
+			/*activar la navegación del menu dar click e irse a las secciones*/
+			
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<header>
+			<table width="100%" border="0" BGCOLOR="#012B5B">
+				<tr>
+					<th width="5%"></th>
+					<th width="5%"><a class="navbar-brand" href="main.html">
+				<img src="img/logo2.png" width="100%" />
+			</a>
+					</th>
+					<th width="5%">
+						<div class="nav-item dropdown"> 
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mas.png" width="70%"></a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="categoria.html">Celulares</a>
+							<a class="dropdown-item" href="categoria.html">Computación</a>
+							<a class="dropdown-item" href="categoria.html">Audio</a>
+							<a class="dropdown-item" href="categoria.html">Consolas y Videojuegos</a>
+						</div>
+					</div>
+					</th>
+					<th>
+						<div id="buscador">
+						<form action="#" method="post">
+							<select id="cat" title="Categorías">
+								<option>Todas las categorías</option>
+								<option>Celulares</option>
+								<option>Computación</option>
+								<option>Audio</option>
+								<option>Consolas y Videojuegos</option>
+							</select>
+							<input type="text" id="txt" name="busqueda" placeholder="Buscar productos" size="50" />	
+							<a class="navbar-brand" href="#">
+							<img src="img/find-icon.png" width="20%" />
+						</a>
+						</form>
+						
+			</div>
+					</th>
+					<th width="10%">
+						<div id="perfil">
+                
+			                <a class="navbar-brand">
+										<img src="img/usuario.png" width="30%" id="usuario" />
+										<div id="nombre_usuario"></div>
+									</a>
+			            </div>
+					</th>
+					<th width="10%">
+						<a class="navbar-brand" href="compra.html">
+							<img src="img/carro-de-la-compra.png" width="30%" />
+						</a>
+					</th>
+				</tr>
+			</table>
+			
+		</header>
+		<br><br><br><br>
+	<hr>
+		<section>
+            <article id="presentacion">
+                <video src="Videos/Xiaomi.mp4" controls="controls"></video>
+            </article>
+            <br><br><br>
+           	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="card">
+						<div id="headingOne" class="card-header" role="tab">
+							<h5 class="mb-0">
+								<a href="#collapseOne" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">
+									Marcas
+								</a>
+							</h5>
+						</div>
+						<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+							<div class="card-block">
+								<div class="list-group">
+									<a class="list-group-item list-group-item-action" href="marca_apple.html" >
+										Apple
+									</a>
+									<a class="list-group-item list-group-item-action" href="marca_moto.html" >
+										Motorola
+									</a>
+									<a class="list-group-item list-group-item-action" href="marca_samsung.html">
+										Samsung
+									</a>
+									<a class="list-group-item list-group-item-action" href="marca_huawei.html">
+										Huawei
+									</a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		<div class="col-lg-9">
+			<h3>Xiaomi</h3>
+			<div class="container marketing">
+		<div id="seccion1" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<img src="img/celulares/mi8lite.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_1" class="bookName">Xiaomi Mi8 Lite</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">6149.80</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+				<div class="col-lg-4">
+					<img src="img/celulares/mi6.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_2" class="bookName">Xiaomi Mi6</span>
+                        <div id="valoracion_2">
+                        </div>
+                        Precio: $<span id="precio_2" class="bookPrice">11635.19</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+				<div class="col-lg-4">
+					<img src="img/celulares/mi8.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_3" class="bookName">Xiaomi Mi8</span>
+                        <div id="valoracion_3">
+                        </div>
+                        Precio: $<span id="precio_3" class="bookPrice">6149.80</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+			</div>
+		</div>
+		<div id="seccion1" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<img src="img/celulares/mia2.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_4" class="bookName">Xiaomi Mi A2</span>
+                        <div id="valoracion_4">
+                        </div>
+                        Precio: $<span id="precio_4" class="bookPrice">4304.80</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+				<div class="col-lg-4">
+					<img src="img/celulares/mia2lite.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_5" class="bookName">Xiaomi Mi A2 Lite</span>
+                        <div id="valoracion_5">
+                        </div>
+                        Precio: $<span id="precio_5" class="bookPrice">3689.80</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+				<div class="col-lg-4">
+					<img src="img/celulares/mimix.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_6" class="bookName">Xiaomi Mi Mix2</span>
+                        <div id="valoracion_6">
+                        </div>
+                        Precio: $<span id="precio_6" class="bookPrice">10044.80</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+			</div>
+		</div>
+		<div id="seccion1" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<img src="img/celulares/mimix4.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_7" class="bookName">Xiaomi Mi Mix3</span>
+                        <div id="valoracion_7">
+                        </div>
+                        Precio: $<span id="precio_7" class="bookPrice">14144.80</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+				<div class="col-lg-4">
+					<img src="img/celulares/poco3.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_8" class="bookName">Xiaomi Pocophone F1</span>
+                        <div id="valoracion_8">
+                        </div>
+                        Precio: $<span id="precio_8" class="bookPrice">6969.80</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+				<div class="col-lg-4">
+					<img src="img/celulares/redmi6.jpg" width="100%"/>
+					<br>
+                        <span id="title_oferta_9" class="bookName">Xiaomi Redmi 6A</span>
+                        <div id="valoracion_9">
+                        </div>
+                        Precio: $<span id="precio_9" class="bookPrice">2377.80</span>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+		</div>
+		</div>
+		
+	</div>
+        </section>
+	<hr>
+	<footer>
+			<div id="seccion2" class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<h2>Acerca de Nosotros</h2>
+						<p>Para nosotros el cliente es primero, por eso, puedes encontrar varias facilidades de pago. Desde meses sin intereses con tarjetas de crédito hasta pagos al recibir tu paquete. Siempre estamos pensando en proteger tus datos personales, es por eso que para que te sientas cómodo comprando online aquí te damos la opción de pagar tu pedido en el momento en el que llegue un mensajero a tocar a tu puerta. Somos uno de los más grandes e-commerce en América Latina. </p>
+					</div>
+					<div class="col-lg-4">
+						<br><br>
+						<p>Todo el año puedes aprovechar de las distintas ofertas y promociones en cada uno de nuestros departamentos, en estos encontrarás artículos de excelente calidad y gran variedad de marcas. Además, aprovecha de grandiosas temporadas del año como Hot Sale, Buen Fin, Día del niño, Navidad y más para comprar lo que siempre has soñado, pero con promociones y descuentos increíbles. Lo que busques lo puedes encontrar aquí. Tenemos lo último en aparatos y accesorios de tecnología, podrás encontrar preventas y lanzamientos de celulares. </p>
+					</div>
+					<div class="col-lg-4">
+						<br><br>
+						<p>Nuestra extensa y asequible gama incluye lo último en electrónicas y dispositivos, como teléfonos inteligentes, tabletas, relojes inteligentes, cámaras de acción, TV-Box, televisores, drones, impresoras 3D, dvr para automóviles, junto con los últimos juguetes geniales como scooters, accesorios para juegos, muñecas, juguetes infantiles,productos de estilo de vida de alta calidad,como aspiradoras, purificadores de aire, herramientas de cocina, iluminación del techo, linternas, pintura al óleo, etc.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="alertingdivbg"  style="display: none">
+		    <div class="alertingdiv"></div>
+		</div>
+	</div>
+
+	
+</body>
+<style type="text/css">
+	header {
+		background-color: #012B5B;
+		color: white;
+	}
+	#main_title {
+				display: inline-block;
+	}
+	
+</style>
+</html>

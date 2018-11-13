@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compra Online</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/etiqueta.png">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <!--<link rel="stylesheet" href="./css/login2.css">-->
+
+    <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="js/eventos.js"></script>
+</head>
+<body>
+<header>
+	<div id="cabecera">
+		<div id="container-logo">
+			<a class="navbar-brand" href="main.html">
+				<img src="img/logo-login.png" width="12%" />
+			</a>
+		</div>
+		<div id="perfil">
+                <a><img id="usuario" src="img/usuario.png" width="5%"></a>
+                <div id="nombre_usuario"></div>
+            </div>
+            <a id="menu_button"></a>
+		<div id="container-help">
+			<p><img src="img/seguro.png" width="1.5%">Compras Seguras &emsp; <img src="img/asesoria.png" width="2.5%">Asesoría Telefónica (951-265-66-74)</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</header>
+<hr/>
+
+<section id="content_profile">
+            <div id="profile">
+                <h2>Perfil</h2>
+                <div id="logout">
+                    <button id="button_logout">Cerrar Sesión</button>
+                </div>
+
+                <form id="form_profile" method="post"  onsubmit="return updatePassword(this);">
+                    <table>
+                        <tr>
+                            <td colspan="2" id="validacion_update"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Usuario:
+                            </td>
+                            <td><input name="user_profile" id="user_profile" type="text" readonly="readonly"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Nombre:
+                            </td>
+                            <td><input name="name_profile" id="name_profile" required type="text" readonly="readonly"></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Correo electrónico:
+                            </td>
+                            <td><input name="email_profile" id="email_profile"  required type="email" readonly="readonly"></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Telefono:
+                            </td>
+                            <td><input name="telephone_profile" id="telephone_profile" required type="tel"  pattern="[0-9]{10}" readonly="readonly"></td>
+                        </tr>
+                        <tr id="new_password">
+                                <td>
+                                    Nueva Contraseña:
+                                </td>
+                            <td><input name="password_profile" id="password_profile" type="password" required ></td>
+                        </tr>
+
+                            <tr id="new_password_repeat">
+                                <td>
+                                    Repite la contraseña:
+                                </td>
+                                <td><input name="password_repeat_profile" id="password_repeat_profile" required type="password"></td>
+                            </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <input id="button_update_password" type="submit" value="Cambiar contraseña">
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </form>
+            </div>
+
+        </section>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<hr/>
+<div id="container-info">
+	<br/>
+	<br/>
+	<span><a href="#">Términos y Condiciones</a>&emsp;|&emsp;<a href="#">Preguntas Frecuentes</a>&emsp;|&emsp;<a href="main.html">Regresar al Sitio</a></span>
+	<br/>
+	<br/>
+	<br/>
+</div>
+<hr/>
+<footer>
+			<div id="seccion2" class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<h2>Acerca de Nosotros</h2>
+						<p>Para nosotros el cliente es primero, por eso, puedes encontrar varias facilidades de pago. Desde meses sin intereses con tarjetas de crédito hasta pagos al recibir tu paquete. Siempre estamos pensando en proteger tus datos personales, es por eso que para que te sientas cómodo comprando online aquí te damos la opción de pagar tu pedido en el momento en el que llegue un mensajero a tocar a tu puerta. Somos uno de los más grandes e-commerce en América Latina. </p>
+					</div>
+					<div class="col-lg-4">
+						<br><br>
+						<p>Todo el año puedes aprovechar de las distintas ofertas y promociones en cada uno de nuestros departamentos, en estos encontrarás artículos de excelente calidad y gran variedad de marcas. Además, aprovecha de grandiosas temporadas del año como Hot Sale, Buen Fin, Día del niño, Navidad y más para comprar lo que siempre has soñado, pero con promociones y descuentos increíbles. Lo que busques lo puedes encontrar aquí. Tenemos lo último en aparatos y accesorios de tecnología, podrás encontrar preventas y lanzamientos de celulares. </p>
+					</div>
+					<div class="col-lg-4">
+						<br><br>
+						<p>Nuestra extensa y asequible gama incluye lo último en electrónicas y dispositivos, como teléfonos inteligentes, tabletas, relojes inteligentes, cámaras de acción, TV-Box, televisores, drones, impresoras 3D, dvr para automóviles, junto con los últimos juguetes geniales como scooters, accesorios para juegos, muñecas, juguetes infantiles,productos de estilo de vida de alta calidad,como aspiradoras, purificadores de aire, herramientas de cocina, iluminación del techo, linternas, pintura al óleo, etc.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<hr>
+<div id="pie">
+	<br/>
+	<br/>
+	<span></span>
+	<span class="copyright">
+		&copy; 2018 | Todos los derechos reservados. | Precios son expresados en moneda nacional (MXN).
+	</span>
+	<div class="clear"></div>
+	<br/>
+	<br/>
+</div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compra Online</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="KIVC">
+	<!---css-->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/miEstilo.css" rel="stylesheet">
+	<link rel="icon" href="img/etiqueta.png">
+	<!--javascrip-->
+	<script src="js/jquery-slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="js/eventos.js"></script>
+	<style type="text/css">
+
+		body{
+			/*activar la navegación del menu dar click e irse a las secciones*/
+			
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<header>
+			<div id="seccion1" class="container-fluid">
+				<div class="row">
+					<div class="col-lg-5"></div>
+					<div class="col-lg-2">
+						<a class="navbar-brand" href="main.html">
+							<img src="img/logo2.png" width="80%" />
+						</a>
+					</div>
+					<div class="col-lg-5">
+                        <div id="perfil">
+                
+                            <a class="navbar-brand">
+                                        <img src="img/usuario.png" width="30%" id="usuario" />
+                                        <div id="nombre_usuario"></div>
+                                    </a>
+                        </div>
+                        <a id="menu_button"></a>               
+                    </div>
+				</div>
+			</div>
+		</header>
+		<br><br><br><br><br><br><br><br>
+		 <section id="content_pago">
+        <form id="form-pago" method="POST" action="main.html" onsubmit="pagar();">
+        <div id="pago-contenido">
+            <div id="direccion-envio" align="left">
+
+                    <table id="info-envio">
+                        <tr><td>Dirección:</td><td><input type="text" id="addr-pago-ln1" class="addr-pago" required="required" placeholder="Dirección "></td></tr>
+                        <tr><td></td><td><input type="text" id="addr-pago-ln2" class="addr-pago"></td></tr>
+                        <tr><td>C.P.</td><td><input placeholder="97000" type="text" id="postc-pago" required="required" pattern="\d{5}"></td></tr>
+                        <tr><td>Estado:</td>
+                            <td>
+                                <select name="state" value="Yucatan" id="estado-pago" form="form-pago">
+                            <option value="1">Aguascalientes</option>
+                            <option value="2">Baja California</option>
+                            <option value="3">Baja California Sur</option>
+                            <option value="4">Campeche</option>
+                            <option value="5">Coahuila de Zaragoza</option>
+                            <option value="6">Colima</option>
+                            <option value="7">Chiapas</option>
+                            <option value="8">Chihuahua</option>
+                            <option value="9">Distrito Federal</option>
+                            <option value="10">Durango</option>
+                            <option value="11">Guanajuato</option>
+                            <option value="12">Guerrero</option>
+                            <option value="13">Hidalgo</option>
+                            <option value="14">Jalisco</option>
+                            <option value="15">México</option>
+                            <option value="16">Michoacán de Ocampo</option>
+                            <option value="17">Morelos</option>
+                            <option value="18">Nayarit</option>
+                            <option value="19">Nuevo León</option>
+                            <option value="20" selected="selected">Oaxaca</option>
+                            <option value="21">Puebla</option>
+                            <option value="22">Querétaro</option>
+                            <option value="23">Quintana Roo</option>
+                            <option value="24">San Luis Potosí</option>
+                            <option value="25">Sinaloa</option>
+                            <option value="26">Sonora</option>
+                            <option value="27">Tabasco</option>
+                            <option value="28">Tamaulipas</option>
+                            <option value="29">Tlaxcala</option>
+                            <option value="30">Veracruz de Ignacio de la Llave</option>
+                            <option value="31">Yucatán</option>
+                            <option value="32">Zacatecas</option>
+                        </select></td></tr>
+                    </table>
+
+            </div>
+            <div id="formas-de-envio" onchange="loadPayment();">
+                <table >
+                    <tr>
+                    <td><input type="radio" name="forma-envio" value="500" ></td><td>DHL EXPRESS - $500</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="forma-envio" value="250" ></td><td>Fedex  - $250</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="forma-envio" value="0" checked></td><td>Correos de México - GRATIS</td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+            <div id="cobro-contenido">
+                <div id="pago-cobro" align="left">
+
+                    <h1>Pago</h1>
+                    <label>Número de tarjeta:</label>
+                    <p><input placeholder="4444333322221111" id="tarjeta" required="required" type="number" maxlength="20" min="0" pattern="(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})"></p>
+                    <label>Name:</label>
+                    <p><input type="text" required="required" placeholder="Nombre"></p>
+
+
+
+                <div class="form-group" id="expiration-date">
+                <label>Fecha de Expiración</label>
+
+                <p><select required="required">
+
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero </option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Mayo</option>
+                    <option value="06">Junio</option>
+                    <option value="07">Julio</option>
+                    <option value="08">Augusto</option>
+                    <option value="09">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                <select required="required">
+                    <option value="17"> 2017</option>
+                    <option value="18"> 2018</option>
+                    <option value="19"> 2019</option>
+                    <option value="20"> 2020</option>
+                    <option value="21"> 2021</option>
+                    <option value="22"> 2022</option>
+                    <option value="23"> 2023</option>
+                </select></p>
+                    <label>Número de seguridad:</label>
+                    <p><input type="number" placeholder="123" maxlength="5" min="0" pattern="\d{3,5}" ></p>
+                </div>
+                </div>
+                <div id="total-cobro" >
+                    <table id="total-calc">
+                        <tr><td>Cantidad</td><td id="cantidad-prods" align="right">1</td></tr>
+                        <tr><td colspan="2">&nbsp;</td></tr>
+                        <tr><td>Costo</td><td id="costo-prods" align="right">$369.00</td></tr>
+                        <tr><td colspan="2">&nbsp;</td></tr>
+                        <tr><td>Envío</td><td id="costo-envio" align="right">$100.00</td></tr>
+                        <tr><td colspan="2"></td></tr>
+                        <tr><td colspan="2" id="total-line" style="border-bottom: medium">&nbsp;</td></tr>
+                        <tr><td>TOTAL:</td><td id="total-prods" align="right">$469.00</td></tr>
+                        <tr><td colspan="2" style="border-bottom: medium">&nbsp;</td></tr>
+                    </table>
+                
+
+
+
+                </div>
+
+        </div>
+
+            <div style="width: 100%;padding-left: 45%;"><input type="submit" id="comprar" value="Confirmar" align="center"></div>
+
+
+        </form>
+
+    </section>
+    <hr>
+		<footer>
+			<div id="seccion2" class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<h2>Acerca de Nosotros</h2>
+						<p>Para nosotros el cliente es primero, por eso, puedes encontrar varias facilidades de pago. Desde meses sin intereses con tarjetas de crédito hasta pagos al recibir tu paquete. Siempre estamos pensando en proteger tus datos personales, es por eso que para que te sientas cómodo comprando online aquí te damos la opción de pagar tu pedido en el momento en el que llegue un mensajero a tocar a tu puerta. Somos uno de los más grandes e-commerce en América Latina. </p>
+					</div>
+					<div class="col-lg-4">
+						<br><br>
+						<p>Todo el año puedes aprovechar de las distintas ofertas y promociones en cada uno de nuestros departamentos, en estos encontrarás artículos de excelente calidad y gran variedad de marcas. Además, aprovecha de grandiosas temporadas del año como Hot Sale, Buen Fin, Día del niño, Navidad y más para comprar lo que siempre has soñado, pero con promociones y descuentos increíbles. Lo que busques lo puedes encontrar aquí. Tenemos lo último en aparatos y accesorios de tecnología, podrás encontrar preventas y lanzamientos de celulares. </p>
+					</div>
+					<div class="col-lg-4">
+						<br><br>
+						<p>Nuestra extensa y asequible gama incluye lo último en electrónicas y dispositivos, como teléfonos inteligentes, tabletas, relojes inteligentes, cámaras de acción, TV-Box, televisores, drones, impresoras 3D, dvr para automóviles, junto con los últimos juguetes geniales como scooters, accesorios para juegos, muñecas, juguetes infantiles,productos de estilo de vida de alta calidad,como aspiradoras, purificadores de aire, herramientas de cocina, iluminación del techo, linternas, pintura al óleo, etc.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<style type="text/css">
+	header {
+		background-color: #012B5B;
+		color: white;
+	}
+	#main_title {
+				display: inline-block;
+	}
+	
+</style>
+</html>

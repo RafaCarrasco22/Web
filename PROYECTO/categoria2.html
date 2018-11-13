@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compra Online</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="KIVC">
+	<!---css-->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/miEstilo.css" rel="stylesheet">
+	<link rel="icon" href="img/etiqueta.png">
+	<!--javascrip-->
+	<script src="js/jquery-slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="js/eventos.js"></script>
+	<style type="text/css">
+
+		body{
+			/*activar la navegación del menu dar click e irse a las secciones*/
+			
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<header>
+			<table width="100%" border="0" BGCOLOR="#012B5B">
+				<tr>
+					<th width="5%"></th>
+					<th width="5%"><a class="navbar-brand" href="main.html">
+				<img src="img/logo2.png" width="100%" />
+			</a>
+					</th>
+					<th width="5%">
+						<div class="nav-item dropdown"> 
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mas.png" width="70%"></a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="categoria.html">Celulares</a>
+							<a class="dropdown-item" href="categoria2.html">Computación</a>
+							<a class="dropdown-item" href="categoria3.html">Audio</a>
+							<a class="dropdown-item" href="categoria4.html">Consolas y Videojuegos</a>
+						</div>
+					</div>
+					</th>
+					<th>
+						<div id="buscador">
+						<form action="#" method="post">
+							<select id="cat" title="Categorías">
+								<option>Todas las categorías</option>
+								<option>Celulares</option>
+								<option>Computación</option>
+								<option>Audio</option>
+								<option>Consolas y Videojuegos</option>
+							</select>
+							<input type="text" id="txt" name="busqueda" placeholder="Buscar productos" size="50" />	
+							<a class="navbar-brand" href="#">
+							<img src="img/find-icon.png" width="20%" />
+						</a>
+						</form>
+						
+			</div>
+					</th>
+					<th width="10%">
+						<div id="perfil">
+                
+			                <a class="navbar-brand">
+										<img src="img/usuario.png" width="30%" id="usuario" />
+										<div id="nombre_usuario"></div>
+									</a>
+			            </div>
+					</th>
+					<th width="10%">
+						<a class="navbar-brand" href="compra.html">
+							<img src="img/carro-de-la-compra.png" width="30%" />
+						</a>
+					</th>
+				</tr>
+			</table>
+			
+		</header>
+		<br><br><br><br>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img class="first-slide" src="img/compus/laps1.jpg" alt="slide uno">
+				<div class="container">
+					<div class="carousel-caption d-none d-md-block text-left">
+						
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<img class="second-slide" src="img/compus/laps2.jpg" alt="slide dos">
+				<div class="container">
+					<div class="carousel-caption d-none d-md-block text-left">
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<img class="third-slide" src="img/compus/lasp3.jpg" alt="slide tres">
+				<div class="container">
+					<div class="carousel-caption d-none d-md-block text-left">
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img class="fourth-slide" src="img/compus/laps5.jpg" alt="slide cuatro">
+				<div class="container">
+					<div class="carousel-caption d-none d-md-block text-left">
+						<h2>Próximamente...</h2>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+			<img src="images/fleft.png" width="30%">
+		</a>
+		<a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+			<img src="images/fnext.png" width="30%">
+		</a>
+	</div>
+	<hr>
+	<section>
+            <br><br><br>
+           	<div class="container">
+		<div class="row">
+			
+		<div class="col-lg-12">
+			<h3>Nuestras Laps</h3>
+			<div class="container marketing">
+		<div id="seccion1" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/acernitro.jpg" width="80%">
+					</a> 
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop Acer Aspire Nitro Intel Core i7 16GB RAM 1TB DD más 128GB SSD</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">30599.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/hp15.jpg" width="80%">
+					</a> 
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop Hp 15bs008la 15.6 Pentium N3710 4g 1t Wh10 Azul Mari HP 15-BS008LA</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">7149.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)"> 
+				</div>
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/lenovoideapad.jpg" width="80%">
+					</a>  
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop Ideapad 14 PULGADAS Lenovo 330-14IGM</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">5899.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div id="seccion1" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/lenovoip330.jpg" width="80%">
+					</a> 
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop Ideapad 14 PULGADAS Lenovo 330-14IGM</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">6499.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">   
+				</div>
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/macair.jpg" width="80%">
+					</a> 
+					<br>
+                        <span id="title_oferta_1" class="bookName">MacBook Air Apple Intel Core i5 Gen 5 8GB RAM 128GB SSD Gris</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">16999.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)"> 
+				</div>
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/dellinspirong3.jpg" width="80%">
+					</a>  
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop DELL Inspiron G3 Intel Core i5 8 Gen 8GB Ram 1TB DD DELL NMX1M</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">17999.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div id="seccion1" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/msi.jpg" width="80%">
+					</a> 
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop MSI GL62 7RD-259MX Intel Core i5 8GB RAM 1TB</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">25199.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">   
+				</div>
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/asuse402.jpg" width="80%">
+					</a>
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop ASUS 15.6 pulgadas Asus X541NA-PD1003Y</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">7009.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">  
+				</div>
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/asusROG.jpg" width="80%">
+					</a>  
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop ASUS ROG Strix GL503 Intel Core i5 7 Gen 8GB Ram 1TB DD Asus GL503VD-GZ118T</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">21999.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)">
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div id="seccion1" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					   
+				</div>
+				<div class="col-lg-4">
+					<a href="#">
+						<img src="img/compus/dell5567.jpg" width="80%">
+					</a> 
+					<br>
+                        <span id="title_oferta_1" class="bookName">Laptop Dell Inspiron 15 5567 Intel Core i7 8GB RAM 2TB Gris</span>
+                        <div id="valoracion_1">
+                        </div>
+                        Precio: $<span id="precio_1" class="bookPrice">14999.00</span>
+                        <br>
+                        <input type="button" class="addBook" value="Agregar al carrito" onclick="addToCart_I(this)"> 
+				</div>
+				<div class="col-lg-4">
+					 
+				</div>
+			</div>
+		</div>
+	</div>
+		</div>
+		</div>
+		
+	</div>
+        </section>
+		<br><br><br><br>
+		
+	<hr>
+	<footer>
+			<div id="seccion2" class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<h2>Acerca de Nosotros</h2>
+						<p>Para nosotros el cliente es primero, por eso, puedes encontrar varias facilidades de pago. Desde meses sin intereses con tarjetas de crédito hasta pagos al recibir tu paquete. Siempre estamos pensando en proteger tus datos personales, es por eso que para que te sientas cómodo comprando online aquí te damos la opción de pagar tu pedido en el momento en el que llegue un mensajero a tocar a tu puerta. Somos uno de los más grandes e-commerce en América Latina. </p>
+					</div>
+					<div class="col-lg-4">
+						<br><br>
+						<p>Todo el año puedes aprovechar de las distintas ofertas y promociones en cada uno de nuestros departamentos, en estos encontrarás artículos de excelente calidad y gran variedad de marcas. Además, aprovecha de grandiosas temporadas del año como Hot Sale, Buen Fin, Día del niño, Navidad y más para comprar lo que siempre has soñado, pero con promociones y descuentos increíbles. Lo que busques lo puedes encontrar aquí. Tenemos lo último en aparatos y accesorios de tecnología, podrás encontrar preventas y lanzamientos de celulares. </p>
+					</div>
+					<div class="col-lg-4">
+						<br><br>
+						<p>Nuestra extensa y asequible gama incluye lo último en electrónicas y dispositivos, como teléfonos inteligentes, tabletas, relojes inteligentes, cámaras de acción, TV-Box, televisores, drones, impresoras 3D, dvr para automóviles, junto con los últimos juguetes geniales como scooters, accesorios para juegos, muñecas, juguetes infantiles,productos de estilo de vida de alta calidad,como aspiradoras, purificadores de aire, herramientas de cocina, iluminación del techo, linternas, pintura al óleo, etc.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="alertingdivbg"  style="display: none">
+		    <div class="alertingdiv"></div>
+		</div>
+	</div>
+	
+</body>
+<style type="text/css">
+	header {
+		background-color: #012B5B;
+		color: white;
+	}
+	#main_title {
+				display: inline-block;
+	}
+	
+</style>
+</html>
